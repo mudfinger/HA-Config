@@ -1,0 +1,22 @@
+################################################################# 
+## Logbook 
+################################################################# 
+
+exclude:
+  domains:
+  - updater
+  - light
+  - group
+  - media_player
+  - sensor
+include:
+  domains:
+  - automation
+  - binary_sensor
+  - device_tracker
+  - input_boolean
+  - input_select
+  - remote
+  - script
+  - zone
+

@@ -1,0 +1,160 @@
+##############################################################
+## Input Boolean  ##
+##############################################################
+
+disable_lights_on_home_from_work:
+  name: Disable Lights On Home From Work
+  initial: off
+  icon: mdi:theme-light-dark
+
+disable_lights_off_in_unoccupied_rooms:
+  name: Disable Lights Off In Unoccupied Rooms
+  initial: off
+  icon: mdi:eye-off
+
+disable_lights_on_at_sunset:
+  name: Disable Lights On At Sunset
+  initial: off
+  icon: mdi:weather-sunset-down
+
+disable_rainy_day_lighting:
+  name: Disable Rainy Day Lighting
+  initial: off
+  icon: mdi:water-off
+
+disable_porch_off_at_midnight:
+  name: Disable Porch Off At Night
+  initial: off
+  icon: mdi:weather-night
+
+disable_porch_on_sunset:
+  name: Disable Porch On At Sunset
+  initial: off
+  icon: mdi:weather-sunset-down
+
+disable_vent_on_sunset:
+  name: Disable Vent On At Sunset
+  initial: off
+  icon: mdi:weather-sunset-down
+
+disable_livingroom_1_on_sunset:
+  name: Disable Livingroom 1 On At Sunset
+  initial: off
+  icon: mdi:weather-sunset-down
+
+disable_kitchen_lights_sunset:
+  name: Disable Kitchen Lights Off At Sunset
+  initial: off
+  icon: mdi:weather-sunset-down
+
+disable_livingroom_lights_sunset:
+  name: Disable Livingroom Lights Off At Sunset
+  initial: off
+  icon: mdi:weather-sunset-down
+
+disable_office_lights_sunset:
+  name: Disable Office Lights Off At Sunset
+  initial: off
+  icon: mdi:weather-sunset-down
+
+disable_home_away_mode:
+  name: Disable Home/Away Mode
+  initial: off
+  icon: mdi:map-marker-off
+
+livingroom_rainbow:
+  name: Living Room Random Color
+  initial: off
+  icon: mdi:power
+
+office_rainbow:
+  name: Office Random Color
+  initial: off
+  icon: mdi:power
+
+kitchen_rainbow:
+  name: Kitchen Random Color
+  initial: off
+  icon: mdi:power
+
+fam_room_rainbow:
+  name: Family Room Random Color
+  initial: off
+  icon: mdi:power
+
+thermostat_away:
+  name: Thermostat Away Mode
+  initial: off
+  icon: mdi:run
+
+vacation_mode:
+  name: Vacation Mode
+  initial: off
+  icon: mdi:airplane
+
+_away:
+  name:  Away
+  initial: off
+  icon: mdi:walk
+
+_away:
+  name:  Away
+  initial: off
+  icon: mdi:walk
+
+disable_garage_door:
+  name: Disable Garage Door
+  initial: off
+  icon: mdi:car
+
+bedtime:
+  name: Bedtime
+  initial: off
+  icon: mdi:hotel
+
+garage_door:
+  name: Garage Door
+  initial: off
+  icon: mdi:car
+
+_home:
+  name: Set  Home
+  initial: off
+  icon: mdi:home-map-marker
+
+_home:
+  name: Set  Home
+  initial: off
+  icon: mdi:home-map-marker
+
+set__away:
+  name: Set  Away
+  initial: off
+  icon: mdi:map-marker-minus
+
+set__away:
+  name: Set  Away
+  initial: off
+  icon: mdi:map-marker-minus
+
+interior_holiday:
+  name: Interior Holiday Lighting
+  initial: off
+  icon: mdi:gift
+
+disable_voice_greeting:
+  name: Disable Audio Notifications
+  initial: off
+  icon: mdi:speaker-off
+
+_greeting:
+  name: Greeting Enabled
+  initial: off
+
+_greeting:
+  name:  Greeting Enabled
+  initial: off
+
+alarm_clock_status:
+  name: Alarm Status
+  initial: on

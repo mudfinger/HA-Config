@@ -1,0 +1,218 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: XXX
+  longitude: XXX
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: XXX
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: XXX
+  customize: !include customize.yaml
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: XXX
+  ssl_certificate: 'XXX'
+  ssl_key: 'XXX'
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+
+# Discover some devices automatically
+discovery:
+  ignore:
+    - philips_hue
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables the map
+map:
+
+# Track the sun
+sun:
+
+# Text to speech
+tts:
+  platform: google
+
+# Devices
+ecobee:
+  api_key: XXX
+
+ifttt:
+  key: XXX
+
+media_player:
+
+  - platform: plex
+
+  - platform: kodi
+    host: XXX
+    name: kodi_family_room
+    username: kodi
+    password: kodi
+
+  - platform: kodi
+    host: XXX
+    name: kodi_livingroom
+    username: kodi
+    password: kodi    
+
+  - platform: kodi
+    host: XXX
+    name: kodi_bedroom
+    username: kodi
+    password: kodi
+
+  - platform: denonavr
+    name: Receiver
+    host: XXX
+
+notify:
+  - name: pushbullet
+    platform: pushbullet
+    api_key: XXX
+
+  - name: ecobee
+    platform: ecobee
+
+device_tracker:
+  - platform: owntracks
+    max_gps_accuracy: 200
+
+mqtt:
+  broker: XXX
+  port: XXX
+  client_id: home-assistant-1
+  username: XXX
+  password: XXX
+
+cover:
+  - platform: myq
+    username: XXX
+    password: XXX
+    type: liftmaster
+
+light:
+  - platform: hue
+    host: XXX
+    allow_unreachable: true
+    allow_hue_groups: false
+    allow_in_emulated_hue: false
+
+  - platform: mqtt_json  
+    name: "SN1 LED"  
+    state_topic: "XXX"  
+    command_topic: "XXX"  
+    brightness: true  
+    flash: true  
+    rgb: true  
+    optimistic: false  
+    qos: 0  
+
+  - platform: mqtt_json  
+    name: "SN2 LED"  
+    state_topic: "XXX"  
+    command_topic: "XXX"  
+    brightness: true  
+    flash: true  
+    rgb: true  
+    optimistic: false  
+    qos: 0
+
+switch:
+  - platform: mqtt
+    name: "sonoff1"
+    command_topic: "cmnd/sonoff1/power"
+    state_topic: "stat/sonoff1/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+  - platform: mqtt
+    name: "sonoff2"
+    command_topic: "cmnd/sonoff2/power"
+    state_topic: "stat/sonoff2/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+  - platform: mqtt
+    name: "sonoff3"
+    command_topic: "cmnd/sonoff3/power"
+    state_topic: "stat/sonoff3/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+emulated_hue:
+  host_ip: XXX
+  expose_by_default: false
+  
+remote:
+  - platform: harmony
+    name: bedroom
+    host: XXX
+
+  - platform: harmony
+    name: family_room
+    host: XXX
+
+  - platform: harmony
+    name: livingroom
+    host: XXX
+
+# Camera
+camera:
+  - platform: yi
+    name: Front Door Cam
+    host: XXX
+    password: XXX
+    ffmpeg_arguments: '-vf scale=800:450'
+
+# Alarm clock
+input_number:
+  alarm_clock_hour:
+    initial: 15
+    min: 0
+    max: 23
+    step: 1
+  alarm_clock_minute:
+    initial: 00
+    min: 0
+    max: 55
+    step: 5
+
+# Includes
+group: !include groups.yaml
+automation: !include automations.yaml
+sensor: !include sensors.yaml
+input_boolean: !include input_boolean.yaml
+input_select: !include input_select.yaml
+script: !include scripts.yaml
+zone: !include zones.yaml

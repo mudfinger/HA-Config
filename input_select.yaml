@@ -1,0 +1,53 @@
+################################################################# 
+## Input Select 
+################################################################# 
+
+
+holiday:
+  name: Holiday Lighting
+  options:
+  - None
+  - Valentine's Day
+  - St. Patrick's Day
+  - Easter
+  - Memorial Day
+  - Independence Day
+  - Labor Day
+  - Halloween
+  - Veterans Day
+  - Thanksgiving
+  - Christmas
+  icon: mdi:gift
+
+
+family_room_remote:
+  name: Harmony Family Room Remote
+  options:
+  - PowerOff
+  - Watch TV
+  - Fire TV
+  - PS3
+  - PS4
+  - Xbox
+  - Wii
+  - Turn on Receiver
+  icon: mdi:remote
+
+bedroom_remote:
+  name: Harmony Bedroom Remote
+  options:
+  - PowerOff
+  - Watch TV
+  - Fire TV
+  - Blu-ray
+  - Turn on Receiver
+  icon: mdi:remote
+
+livingroom_remote:
+  name: Harmony Livingroom Remote
+  options:
+  - PowerOff
+  - Watch TV
+  - Fire TV
+  - Blu-ray
+  icon: mdi:remote

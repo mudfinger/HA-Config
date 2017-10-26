@@ -1,0 +1,82 @@
+#################################################################
+## Scripts 
+#################################################################
+
+##########################################################
+## Harmony Remote
+##########################################################
+
+input_select_harmony_family_room:
+  alias: "Start Family Room Remote activity from input select"
+  sequence:
+    service: remote.turn_on
+    data_template:
+      entity_id: remote.family_room
+      activity: > 
+        {% if is_state("input_select.family_room_remote", "PowerOff") %}
+          -1
+        {% elif is_state("input_select.family_room_remote", "Watch TV") %}
+          16512559
+        {% elif is_state("input_select.family_room_remote", "Fire TV") %}
+          16512624
+        {% elif is_state("input_select.family_room_remote", "PS4") %}
+          20773308
+        {% elif is_state("input_select.family_room_remote", "PS3") %}
+          16512659
+        {% elif is_state("input_select.family_room_remote", "Xbox") %}
+          16512742
+        {% elif is_state("input_select.family_room_remote", "Wii") %}
+          16512731
+        {% elif is_state("input_select.family_room_remote", "Turn on Receiver") %}
+          30719183
+        {% endif %}
+
+#########
+
+input_select_harmony_bedroom:
+  alias: "Start Bedroom Remote activity from input select"
+  sequence:
+    service: remote.turn_on
+    data_template:
+      entity_id: remote.bedroom
+      activity: >
+        {% if is_state("input_select.bedroom_remote", "PowerOff") %}
+          -1
+        {% elif is_state("input_select.bedroom_remote", "Watch TV") %}
+          16376100
+        {% elif is_state("input_select.bedroom_remote", "Fire TV") %}
+          21816236
+        {% elif is_state("input_select.bedroom_remote", "Blu-ray") %}
+          16376084
+        {% elif is_state("input_select.bedroom_remote", "Turn on Receiver") %}
+          30511075
+        {% endif %}
+
+#########
+
+input_select_harmony_livingroom:
+  alias: "Start Livingroom Remote activity from input select"
+  sequence:
+    service: remote.turn_on
+    data_template:
+      entity_id: remote.livingroom
+      activity: >
+        {% if is_state("input_select.livingroom_remote", "PowerOff") %}
+          -1
+        {% elif is_state("input_select.livingroom_remote", "Watch TV") %}
+          27783970
+        {% elif is_state("input_select.livingroom_remote", "Fire TV") %}
+          27792829
+        {% elif is_state("input_select.livingroom_remote", "Blu-ray") %}
+          27783967
+        {% endif %}
+
+wake_up:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: group.bedroom_lights
+        brightness: 255
+        transition: 1800
+#    - service: homeassistant.turn_off
+#      entity_id: switch.smart_switch1

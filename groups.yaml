@@ -1,0 +1,440 @@
+#################################################################
+## Tab Groups
+#################################################################
+
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.household
+    - group.garage
+    - group.interior_lights
+    - group.basement
+    - group.first_floor
+    - group.second_floor
+    - group.night_lights
+    - group.switches
+    - camera.front_door_cam
+
+lights_tab:
+  name: Lights
+  view: yes
+  icon: mdi:lightbulb-outline
+  entities:
+    - group.basement_lights
+    - group.first_floor_lights
+    - group.second_floor_lights
+    - group.night_lights
+
+livingroom_tab:
+  name: Livingroom
+  view: yes
+  icon: mdi:sofa
+  entities:
+    - group.livingroom
+    - group.livingroom_remote
+
+fam_room_tab:
+  name: Family Room
+  view: yes
+  icon: mdi:movie
+  entities:
+    - group.fam_room
+    - group.family_room_remote
+
+kitchen_tab:
+  name: Kitchen
+  view: yes
+  icon: mdi:silverware-variant
+  entities:
+    - group.kitchen
+
+bedrooms_tab:
+  name: Bedroom
+  view: yes
+  icon: mdi:hotel
+  entities:
+    - group.bedroom
+    - group._bedroom
+    - group.bedroom_remote
+    - group.alarm_clock
+
+office_tab:
+  name: Office
+  view: yes
+  icon: mdi:desktop-mac
+  entities:
+    - group.office
+
+automation_tab:
+  name: Automation
+  view: yes
+  icon: mdi:robot
+  entities:
+    - group.automation_override
+    - group.automation_on_demand
+    - group.location_controls
+    - group.thermostat
+    - group.party_modes
+
+sensors_tab:
+  name: Sensors
+  view: yes
+  icon: mdi:gauge
+  entities:
+    - group.household
+    - group.device_location
+    - group.weather
+    - group.indoor_temperature
+    - group.occupancy
+    - group.speedtest
+    - group.system
+    - group.sensor_node_1
+    - group.sensor_node_2
+
+media_tab:
+  name: Media
+  view: yes
+  icon: mdi:play-circle-outline
+  entities:
+    - group.media_players
+    - group.family_room_remote
+    - group.bedroom_remote
+    - group.livingroom_remote
+
+#################################################################
+## Rooms
+#################################################################
+
+livingroom:
+  - sensor.main_floor_temperature
+  - binary_sensor.main_floor_occupancy
+  - group.livingroom_lights
+#  - light.livingroom_1
+  - media_player.kodi_livingroom
+
+fam_room:
+  - sensor.basement_temperature
+  - binary_sensor.basement_occupancy
+  - group.fam_room_lights
+  - group.overhead_lights
+  - media_player.kodi_family_room
+  - media_player.receiver
+
+kitchen:
+  - sensor.kitchen_temperature
+  - binary_sensor.kitchen_occupancy
+  - group.table_lights
+  - group.sink_lights
+#  - light.vent
+  - light.cabinets
+
+bedroom:
+  - sensor.bedroom_temperature
+  - binary_sensor.bedroom_occupancy
+  - group.bedroom_lights
+  - media_player.kodi_bedroom
+  - media_player.roku_
+
+des_bedroom:
+  - sensor.kids_room_temperature   
+  - binary_sensor.kids_room_occupancy
+  - light.des_bedroom
+  - media_player.roku_
+
+office:
+  - sensor.office_temperature
+  - binary_sensor.office_occupancy
+  - group.office_lights
+
+basement:
+  - group.fam_room
+  - group.office
+#  - light.laundry_room
+
+first_floor:
+  - group.kitchen
+  - group.livingroom
+  - group.garage
+
+second_floor:
+  - group.bedroom
+  - group.des_bedroom
+  - group.hall
+
+hall:
+  - light.hall
+
+porch:
+  - light.porch
+   
+garage:
+  - cover.garage_door
+  - group.garage_lights
+
+#################################################################
+## Light Groups
+#################################################################
+
+livingroom_lights:
+#  - light.livingroom_1
+  - light.livingroom_2
+  - light.livingroom_3
+
+garage_lights:
+  - light.garage_1
+  - light.garage_2
+
+fam_room_lights:
+  - light.fam_right
+  - light.fam_left
+  - light.fam_right_rear
+  - light.tv_upper
+  - light.tv_lower
+  - light.mantle
+
+overhead_lights:
+  - light.oh_1
+  - light.oh_2
+  - light.oh_3
+
+sink_lights:
+  - light.sink_1
+  - light.sink_2
+  - light.sink_3
+
+table_lights:
+  - light.table_1
+  - light.table_2
+  - light.table_3
+  - light.table_4
+  - light.table_5
+
+kitchen_lights:
+  - group.sink_lights
+  - group.table_lights
+#  - light.vent
+  - light.cabinets
+
+bedroom_lights:
+  - light.nightstand
+  - light.armoire
+
+office_lights:
+  - light.office_ceiling
+  - light.desk
+
+basement_lights:
+  - group.fam_room_lights
+  - group.overhead_lights
+  - group.office_lights
+  - light.laundry_room
+
+first_floor_lights:
+  - group.livingroom_lights
+  - group.kitchen_lights
+#  - light.porch
+
+second_floor_lights:
+  - group.bedroom_lights
+  - light.hall
+  - light.des_bedroom
+
+interior_lights:
+  - group.first_floor_lights
+  - group.second_floor_lights
+  - group.basement_lights
+#  - group.night_lights
+
+night_lights:
+  - light.livingroom_1
+  - light.porch
+  - light.vent
+
+#################################################################
+## Automation Control Groups
+#################################################################
+
+automation_override:
+  - input_boolean.disable_garage_door
+  - input_boolean.disable_rainy_day_lighting
+  - input_boolean.disable_lights_off_in_unoccupied_rooms
+  - input_boolean.disable_lights_on_home_from_work
+  - input_boolean.disable_lights_on_at_sunset
+  - input_boolean.disable_porch_on_sunset
+  - input_boolean.disable_porch_off_at_midnight
+  - input_boolean.disable_home_away_mode
+  - input_boolean.disable_livingroom_1_on_sunset
+  - input_boolean.disable_vent_on_sunset
+  - input_boolean.disable_voice_greeting
+
+automation_on_demand:
+  - input_boolean.bedtime
+#  - input_boolean.vacation_mode
+  - input_select.family_room_remote
+  - input_select.bedroom_remote
+  - input_select.livingroom_remote
+  - input_boolean.jason_greeting
+  - input_boolean.des_greeting
+
+party_modes:
+  - input_boolean.livingroom_rainbow
+  - input_boolean.office_rainbow
+  - input_boolean.kitchen_rainbow
+  - input_boolean.fam_room_rainbow
+  - input_select.holiday
+  - input_boolean.interior_holiday
+
+#################################################################
+## Environmental Groups
+#################################################################
+
+thermostat:
+  - climate.main_floor
+  - sensor.main_floor_humidity
+
+indoor_temperature:
+  - sensor.main_floor_temperature
+  - sensor.main_floor_humidity
+  - sensor.kitchen_temperature
+  - sensor.basement_temperature
+  - sensor.office_temperature
+  - sensor.bedroom_temperature
+  - sensor.kids_room_temperature
+
+weather:
+  - sun.sun
+  - sensor.dark_sky_temperature
+  - sensor.dark_sky_summary
+  - sensor.dark_sky_apparent_temperature
+  - sensor.dark_sky_precip
+  - sensor.dark_sky_precip_probability
+  - sensor.dark_sky_precip_intensity
+  - sensor.dark_sky_humidity
+  - sensor.dark_sky_dew_point
+  - sensor.dark_sky_cloud_cover
+  - sensor.dark_sky_nearest_storm_distance
+  - sensor.dark_sky_wind_speed
+  - sensor.dark_sky_wind_bearing
+  - sensor.dark_sky_visibility
+  - sensor.dark_sky_ozone
+  - sensor.dark_sky_pressure
+
+#################################################################
+## Sensor Node Groups
+#################################################################
+
+sensor_node_1:
+  name: Sensor Node 1  
+  entities:  
+    - sensor.sn1_temperature  
+    - sensor.sn1_humidity  
+    - sensor.sn1_ldr  
+    - sensor.sn1_pir  
+    - light.sn1_led
+
+sensor_node_2:
+    name: Sensor Node 2  
+    entities:  
+      - sensor.sn2_temperature  
+      - sensor.sn2_humidity  
+      - sensor.sn2_ldr  
+      - sensor.sn2_pir  
+      - light.sn2_led
+
+################################################################
+## Media Groups
+#################################################################
+
+media_players:
+  - media_player.kodi_family_room
+  - media_player.kodi_bedroom
+  - media_player.kodi_livingroom
+  - media_player.roku_
+  - media_player.roku_
+  - media_player.receiver
+
+remotes:
+  - group.family_room_remote
+  - group.bedroom_remote
+  - group.livingroom_remote
+
+family_room_remote:
+  - remote.family_room
+  - sensor.harmony_family_room
+  - input_select.family_room_remote
+
+bedroom_remote:
+  - remote.bedroom
+  - sensor.harmony_bedroom
+  - input_select.bedroom_remote
+
+livingroom_remote:
+  - remote.livingroom
+  - sensor.harmony_livingroom
+  - input_select.livingroom_remote
+
+#################################################################
+## Presence Detection and Occupancy Groups
+#################################################################
+
+household:
+  - device_tracker.
+  - device_tracker.
+
+occupancy:
+  - binary_sensor.main_floor_occupancy
+  - binary_sensor.kitchen_occupancy
+  - binary_sensor.bedroom_occupancy
+  - binary_sensor.basement_occupancy
+  - binary_sensor.office_occupancy
+  - binary_sensor.kids_room_occupancy
+
+location_controls:
+  - input_boolean._away
+  - input_boolean._away
+  - input_boolean._home
+  - input_boolean._home
+  - input_boolean.set__away
+  - input_boolean.set__away
+
+travel_times:
+  - sensor.time_to_home
+  - sensor.time_to__home
+  - sensor.time_to_work
+  - sensor.time_to__school
+
+#################################################################
+## System Monitoring Groups
+#################################################################
+
+speedtest:
+  - sensor.speedtest_ping
+  - sensor.speedtest_download
+  - sensor.speedtest_upload
+
+system:
+  - sensor.cpu
+  - sensor.cpu_use
+  - sensor.ram_use
+  - sensor.ram_free
+  - sensor.since_last_boot
+  - updater.updater
+
+# Alarm clock
+alarm_clock:
+  name: 'Alarm Clock'
+  entities:
+    - sensor.alarm_clock_time
+    - input_number.alarm_clock_hour
+    - input_number.alarm_clock_minute
+    - input_boolean.alarm_clock_status
+
+#################################################################
+## Switch Groups
+#################################################################
+
+switches:
+  - switch.sonoff1
+  - switch.sonoff2
+  - switch.sonoff3

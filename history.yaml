@@ -1,0 +1,39 @@
+#################################################################
+## History
+#################################################################
+include:
+  domains:
+  - group
+  - device_tracker
+  - input_select
+  - media_player
+  - sensor
+  - sun
+  entities:
+  - group.bedroom_lights
+  - group.fam_room_lights
+  - group.livingroom_lights
+  - group.night_lights
+  - group.office_lights
+  - group.overhead_lights
+  - group.party_modes
+  - group.sink_lights
+  - group.table_lights
+  - light.cabinets
+  - light._bedroom
+  - light.hall
+  - light.laundry_room
+  - light.livingroom_1
+  - light.porch
+  - light.vent
+
+exclude:
+  domains:
+  - automation
+  - binary_sensor
+  - input_boolean
+  - light
+  - remote
+  - script
+  - updater
+  - zone

@@ -1,0 +1,30 @@
+################################################################# 
+## Zones 
+#################################################################
+
+#Home
+  - name: Home
+    latitude: XXX
+    longitude: XXX
+    radius: 300
+    icon: mdi:home
+#Work
+  - name: Work
+    latitude: XXX
+    longitude: XXX
+    radius: 300
+    icon: mdi:tie
+
+#' Home
+  - name:  Home
+    latitude: XXX
+    longitude: XXX
+    radius: 300
+    icon: mdi:home
+
+#' School
+  - name: School
+    latitude: XXX
+    longitude: XXX
+    radius: 300
+    icon: mdi:school

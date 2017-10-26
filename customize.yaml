@@ -1,0 +1,596 @@
+#################################################################
+## Customize
+#################################################################
+
+##########################################################
+## Thermostat
+##########################################################
+
+group.thermostat:
+  friendly_name: Thermostat
+
+climate.main_floor:
+  friendly_name: Thermostat
+
+sensor.main_floor_humidity:
+  icon: mdi:water-percent
+  friendly_name: Livingoom Humidity
+
+sensor.main_floor_temperature:
+  friendly_name: Livingoom Temperature
+
+binary_sensor.main_floor_occupancy:
+  friendly_name: Livingoom Occupancy
+
+##########################################################
+## Automation
+##########################################################
+
+group.automation_override:
+  friendly_name: Automation Override
+
+group.automation_on_demand:
+  friendly_name: Automation On Demand
+
+group.party_modes:
+  friendly_name: Party Modes
+
+group.location_controls:
+  friendly_name: Location Controls
+
+##########################################################
+## Device Trackers
+##########################################################
+
+device_tracker.XXX:
+  icon: mdi:human-male
+  friendly_name: XXX
+
+device_tracker.XXX:
+  icon: mdi:human-female
+  friendly_name: XXX
+
+##########################################################
+## Doors
+##########################################################
+
+cover.garage_door:
+  icon: mdi:car
+  friendly_name: Garage
+  emulated_hue_hidden: false
+
+##########################################################
+## Travel Times
+##########################################################
+
+#sensor.time_to_home:
+#  icon: mdi:car
+
+#sensor.time_to_XXX_home:
+#  icon: mdi:car
+
+#sensor.time_to_work:
+#  icon: mdi:car
+
+#sensor.time_to_XXX_school:
+#  icon: mdi:car
+
+##########################################################
+## Rooms
+##########################################################
+
+group.livingroom:
+  friendly_name: Livingroom
+  icon: mdi:sofa
+
+group.kitchen:
+  friendly_name: Kitchen
+  icon: mdi:fridge
+
+group.bedroom:
+  friendly_name: Bedroom
+  icon: mdi:hotel
+
+group.fam_room:
+  friendly_name: Family Room
+  icon: mdi:movie
+
+group.hall:
+  friendly_name: Hall
+  icon: mdi:stairs
+
+group.garage:
+  friendly_name: Garage
+  icon: mdi:car
+
+group.office:
+  friendly_name: Office
+  icon: mdi:desktop-mac
+
+group.des_bedroom:
+  icon: mdi:hotel
+  friendly_name: XXX Bedroom
+
+group.basement:
+  friendly_name: Basement
+  icon: mdi:stairs
+
+group.first_floor:
+  friendly_name: First Floor
+  icon: mdi:stairs
+
+group.second_floor:
+  friendly_name: Second Floor
+  icon: mdi:stairs
+
+group.porch:
+  icon: mdi:ceiling-light
+  friendly_name: Porch Lighting
+
+##########################################################
+## Light Groups
+##########################################################
+
+group.livingroom_lights:
+  icon: mdi:sofa
+  friendly_name: Livingroom Lighting
+
+group.kitchen_lights:
+  icon: mdi:fridge
+  friendly_name: Kitchen Lighting
+
+group.table_lights:
+  icon: mdi:ceiling-light
+  friendly_name: Table Lighting
+
+group.sink_lights:
+  icon: mdi:ceiling-light
+  friendly_name: Sink Lighting
+
+group.bedroom_lights:
+  icon: mdi:hotel
+  friendly_name: Bedroom Lighting
+
+group.overhead_lights:
+  friendly_name: Family Room Ceiling
+  icon: mdi:ceiling-light
+
+group.fam_room_lights:
+  icon: mdi:movie
+  friendly_name: Family Room Lighting
+
+group.office_lights:
+  icon: mdi:desktop-mac
+  friendly_name: Office Lighting
+
+group.des_bedroom_lights:
+  icon: mdi:hotel
+  friendly_name: Des' Bedroom Lighting
+
+group.basement_lights:
+  icon: mdi:lightbulb
+  friendly_name: Basement Lighting
+
+group.first_floor_lights:
+  icon: mdi:lightbulb
+  friendly_name: First Floor Lighting
+
+group.second_floor_lights:
+  icon: mdi:lightbulb
+  friendly_name: Second Floor Lighting
+
+group.night_lights:
+  icon: mdi:lightbulb
+  friendly_name: Night Lighting
+
+group.interior_lights:
+  icon: mdi:lightbulb
+  friendly_name: Interior Lighting
+
+group.garage_lights:
+  icon: mdi:ceiling-light
+  friendly_name: Garage Lighting
+
+##########################################################
+## Sensors
+##########################################################
+
+sensor.cpu_use:
+  friendly_name: CPU Usage
+
+sensor.ram_use:
+  friendly_name: RAM Usage
+
+sensor.since_last_boot:
+  friendly_name: Uptime
+
+sensor.speedtest_ping:
+  icon: mdi:speedometer
+
+sensor.speedtest_download:
+  icon: mdi:speedometer
+
+sensor.speedtest_upload:
+  icon: mdi:speedometer
+
+##########################################################
+## Lights
+##########################################################
+
+light.hall:
+  icon: mdi:ceiling-light
+
+light.nightstand:
+  icon: mdi:lamp
+
+light.armoire:
+  icon: mdi:lamp
+
+light.des_bedroom:
+  icon: mdi:lamp
+
+light.office_overhead:
+  icon: mdi:ceiling-light
+
+light.desk:
+  icon: mdi:lamp
+
+light.oh_1:
+  hidden: true
+  icon: mdi:ceiling-light
+
+light.oh_2:
+  hidden: true
+  icon: mdi:ceiling-light
+
+light.oh_3:
+  hidden: true
+  icon: mdi:ceiling-light
+
+light.sink_1:
+  hidden: true
+  icon: mdi:ceiling-light
+
+light.sink_2:
+  hidden: true
+  icon: mdi:ceiling-light
+
+light.sink_3:
+  hidden: true
+  icon: mdi:ceiling-light
+
+light.table_1:
+  hidden: true
+  icon: mdi:ceiling-light
+
+light.table_2:
+  hidden: true
+  icon: mdi:ceiling-light
+
+light.table_3:
+  hidden: true
+  icon: mdi:ceiling-light
+
+light.table_4:
+  hidden: true
+  icon: mdi:ceiling-light
+
+light.table_5:
+  hidden: true
+  icon: mdi:ceiling-light
+
+light.livingroom_1:
+  hidden: false
+  icon: mdi:lamp
+
+light.livingroom_2:
+  hidden: false
+  icon: mdi:lamp
+
+light.livingroom_3:
+  hidden: false
+  icon: mdi:lamp
+
+light.fam_left:
+  hidden: false
+  icon: mdi:lamp
+
+light.fam_right:
+  hidden: false
+  icon: mdi:lamp
+
+light.fam_right_rear:
+  hidden: false
+  icon: mdi:lamp
+
+light.tv_upper:
+  icon: mdi:led-strip
+  hidden: false
+
+light.tv_lower:
+  icon: mdi:led-strip
+  hidden: false
+
+light.mantle:
+  icon: mdi:led-strip
+  hidden: false
+
+light.cabinets:
+  icon: mdi:led-strip
+  hidden: false
+
+light.porch:
+  hidden: false
+  icon: mdi:ceiling-light
+
+light.vent:
+  hidden: false
+  icon: mdi:ceiling-light
+
+light.laundry_room:
+  hidden: false
+  icon: mdi:ceiling-light
+
+##########################################################
+## Switches
+##########################################################
+
+switch.sonoff1:
+  icon: mdi:fan
+  friendly_name: 'Kitchen Fan'
+
+switch.sonoff2:
+  icon: mdi:fan
+  friendly_name: 'Office Fan'
+
+switch.sonoff3:
+  icon: mdi:fan
+  friendly_name: 'Bedroom Fan'
+
+group.switches:
+  friendly_name: Switches
+
+##########################################################
+## Weather
+##########################################################
+
+sensor.dark_sky_temperature:
+  friendly_name: 'Outdoor Temperature'
+
+sensor.dark_sky_summary:
+  icon: mdi:weather-sunny
+  friendly_name: 'Summary'
+
+sensor.dark_sky_hourly_summary:
+  icon: mdi:weather-sunny
+  friendly_name: 'Hourly Summary'
+
+sensor.dark_sky_minutely_summary:
+  icon: mdi:weather-sunny
+  friendly_name: 'Minute Summary'
+
+sensor.dark_sky_daily_summary:
+  icon: mdi:weather-sunny
+  friendly_name: 'Daily Summary'
+
+sensor.dark_sky_apparent_temperature:
+  icon: mdi:thermometer-lines
+  friendly_name: 'Apparent Temperature'
+
+sensor.dark_sky_precip:
+  icon: mdi:weather-pouring
+  friendly_name: 'Precipitation'
+
+sensor.dark_sky_precip_probability:
+  icon: mdi:weather-pouring
+  friendly_name: 'Precipitation Probability'
+
+sensor.dark_sky_precip_intensity:
+  icon: mdi:weather-pouring
+  friendly_name: 'Rainfall'
+
+sensor.dark_sky_humidity:
+  icon: mdi:water-percent
+  friendly_name: 'Outdoor Humidity'
+
+sensor.dark_sky_cloud_cover:
+  icon: mdi:weather-cloudy
+  friendly_name: 'Cloud Cover'
+
+sensor.dark_sky_nearest_storm_distance:
+  icon: mdi:weather-lightning
+  friendly_name: 'Nearest Storm'
+
+sensor.dark_sky_wind_speed:
+  icon: mdi:weather-windy
+  friendly_name: 'Wind Speed'
+
+sensor.dark_sky_wind_bearing:
+  icon: mdi:weather-windy
+  friendly_name: 'Wind Bearing'
+
+sensor.dark_sky_ozone:
+  icon: mdi:cloud
+  friendly_name: 'Ozone'
+
+sensor.dark_sky_pressure:
+  icon: mdi:weight
+  friendly_name: 'Pressure'
+
+sensor.dark_sky_dew_point:
+  friendly_name: 'Dew Point'
+
+sensor.dark_sky_visibility:
+  friendly_name: 'Visibility'
+
+##########################################################
+## Media Players
+##########################################################
+
+media_player.kodi_family_room:
+  icon: mdi:kodi
+  friendly_name: Family Room Kodi
+
+media_player.kodi_livingroom:
+  icon: mdi:kodi
+  friendly_name: Livingroom Kodi
+
+media_player.kodi_bedroom:
+  icon: mdi:kodi
+  friendly_name: Bedroom Kodi
+
+media_player.receiver:
+  friendly_name: Denon Reciever
+
+media_player.roku_:
+  friendly_name: Bedroom Roku
+
+media_player.roku_:
+  friendly_name: Bedroom 2 Roku
+
+##########################################################
+## Misc Groups
+##########################################################
+
+group.basement_occupancy:
+  hidden: false
+
+group.home_lights:
+  hidden: true
+
+group.household:
+  friendly_name: Household
+
+group.indoor_temperature:
+  friendly_name: Indoor Temperature
+
+group.system:
+  friendly_name: System
+
+group.weather:
+  friendly_name: Weather
+
+group.occupancy:
+  friendly_name: Occupancy
+
+##########################################################
+## Scenes
+##########################################################
+
+#scene.vacation:
+#  hidden: true
+
+#scene.vacation_disable_automation:
+#  hidden: true
+
+#scene.vacation_enable_automation:
+#  hidden: true
+
+##########################################################
+## Amazon Echo Integration
+##########################################################
+
+input_boolean.office_rainbow:
+  emulated_hue_hidden: false
+  emulated_hue_name: "Office Party"
+
+input_boolean.livingroom_rainbow:
+  emulated_hue_hidden: false
+  emulated_hue_name: "Livingroom Party"
+
+input_boolean.fam_room_rainbow:
+  emulated_hue_hidden: false
+  emulated_hue_name: "Family Room Party"
+
+input_boolean.kitchen_rainbow:
+  emulated_hue_hidden: false
+  emulated_hue_name: "Kitchen Party"
+
+input_boolean.vacation_mode:
+  emulated_hue_hidden: false
+  emulated_hue_name: "Vacation Mode"
+
+input_boolean.garage_door:
+  emulated_hue_hidden: false
+  emulated_hue_name: "Garage Door Status"
+
+input_boolean.bedtime:
+  emulated_hue_hidden: false
+  emulated_hue_name: "Bedtime"
+
+##########################################################
+## Input Boolean
+##########################################################
+
+input_boolean.XXXgreeting:
+  hidden: true
+
+input_boolean.XXX_greeting:
+  hidden: true
+
+##########################################################
+## Remote
+##########################################################
+
+group.remotes:
+  icon: mdi:remote
+  friendly_name: Remotes
+
+group.family_room_remote:
+  icon: mdi:remote
+  friendly_name: Family Room Remote
+
+group.bedroom_remote:
+  icon: mdi:remote
+  friendly_name: Bedroom Remote
+
+group.livingroom_remote:
+  icon: mdi:remote
+  friendly_name: Livingroom Remote
+
+sensor.harmony_family_room:
+  icon: mdi:remote
+  friendly_name: Family Room Remote Status
+
+sensor.harmony_bedroom:
+  icon: mdi:remote
+  friendly_name: Bedroom Remote Status
+
+sensor.harmony_livingroom:
+  icon: mdi:remote
+  friendly_name: Livingroom Remote Status
+
+remote.bedroom:
+  icon: mdi:remote
+  friendly_name: Bedroom Remote
+
+remote.family_room:
+  icon: mdi:remote
+  friendly_name: Family Room Remote
+
+remote.livingroom:
+  icon: mdi:remote
+  friendly_name: Livingroom Remote
+
+# Alarm clock sensors
+sensor.time:
+  hidden: true
+sensor.alarm_clock_hour:
+  hidden: true
+sensor.alarm_clock_minute:
+  hidden: true
+sensor.alarm_clock_time_long:
+  hidden: true
+sensor.alarm_clock_time:
+  friendly_name: 'Alarm Clock Setting'
+  icon: mdi:alarm
+# Alarm clock inputs
+input_number.alarm_clock_hour:
+  friendly_name: 'Hour'
+  icon: mdi:timer
+input_number.alarm_clock_minute:
+  friendly_name: 'Minute'
+  icon: mdi:timer
+input_boolean.alarm_clock_status:
+  friendly_name: 'Alarm Clock Status'
+  icon: mdi:alarm-check
